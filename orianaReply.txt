@@ -1,0 +1,8 @@
+Hallo Oriane, deine Lösunge funktioniert leider nur für das eine Beispiel. Bei solchen Aufgaben musst du aber alle Möglichkeiten abdecken. Hier die Probleme:
+1. Dein splice in Zeile 38 geht davon aus, dass der Westen nach dem Osten kommt --> du löschst immer den Osten und das folgende Element. Wenn aber der Westen vor dem Osten steht, klappt das leider nicht mehr, obwohl auch hbeide gelöscht werden müssten 
+
+2. Genauso mit dem splice in in Zeile 50, dort löschst du den Norden und das folgende Element, im Beispiel ist das dann imm er der Süden, aber die könnten auch umgedreht stehen.
+
+3. Dein i zählt bei jedem Durchlauf eins hoch. Wenn du einen sehr langen Array mit vielen Paare zum Löschen hast, dann ist, der Loop zuende obwohl noch Paare übrig sind. Du musst daher bei jeder Veränderung den Loop wieder von vorne anfangen.
+
+
